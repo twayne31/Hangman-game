@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Hangman Game</title>
+	<link rel="stylesheet" href="./assets/css/style.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+	<link rel="stylesheet" href="./assets/css/style.css">
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<script type="text/javascript" src="./assets/javascript/game.js"></script>
+</head>
+<body>
+<!-- <input id="letter" type="text">
+ --><!-- <input type="button" value="letter" onclick="Letter()">
+ --><div class= "container">	
+	<h1>hangman game</h1>
+
+	<h2>Press any key to get started!</h2>
+
+	<div id="answer"></div>
+	<div id="counter"></div>
+
+	<h3 id="wins">Wins:</h3>
+
+
+	<h4>Number of guesses remaining:</h4>
+
+	<h5>Letters Already Guessed:</h5>
+	<h5 id="guessed"></h5>
+</div>
+
+</body>
+</html>
+
+<!-- <script type="text/javascript">
+	
+	document.onkeyup = function(event){
+
+	var randomWordArr = ["beer", "function", "cat"]
+	var randomWord = randomWordArr[Math.floor(Math.random()* randomWordArr.length)]
+	var s;
+	var count = 0;
+	var answerArray = [];	
+	//here we get the letter that the user puts in the box
+	console.log(randomWord[0])
+	var letter = event.key
+	console.log(letter)
+	//make sure we have a guess (checks can be made here, only letters etc.)
+	if (letter.length > 0){
+
+		for (var i = 0; i < randomWord.length; i++){
+			if (randomWord[i] === letter){
+				answerArray[i] = letter;
+				console.log(randomWord[i])
+			}
+		}
+	count++;
+	document.getElementById("answer").innerHTML = answerArray.join(" ");
+	$("#answer").append(answerArray);
+
+	}
+	function Letter(){
+
+	document.onkeyup = function(event){
+	//here we get the letter that the user puts in the box
+	var letter = event.key
+	console.log(letter)
+	//make sure we have a guess (checks can be made here, only letters etc.)
+	if (letter.length > 0){
+		for (var i = 0; i < randomWord.length; i++){
+			randomWord[i] = randomWord.charAt(i)
+			if (randomWord.charAt(i) === letter){
+				answerArray[i] = letter;
+			}
+		}
+	console.log()	
+	count++;
+	console.log(letter)
+	document.getElementById("answer").innerHTML = answerArray.join(" ");
+
+	}
+
+}
+}	
+};
+</script> -->
+<!-- 
+	<script>
+
+	document.onkeyup = function(event){
+		userGuess = event.key;
+		console.log(userGuess);
+
+		document.getElementById("guessed").textContent += userGuess;
+
+		}
+
+
+	</script> -->
+<!-- 2. Choose a theme for your game! In the demo, we picked an 80s theme: 80s questions, 80s sound and an 80s aesthetic. You can choose any subject for your theme, though, so be creative!
+
+3. Use key events to listen for the letters that your players will type.
+
+4. Display the following on the page:
+
+5. Press any key to get started!
+
+6. Wins: (# of times user guessed the word correctly).
+	Set variable to 0.
+	var wins = 0;
+	if a player wins, increment by 1
+	var playerWins = function(){
+	wins++
+}
+
+   * If the word is `madonna`, display it like this when the game starts: `_ _ _ _ _ _ _`.
+   -create a variable for the word
+   -display a dash, for each letter in word 
+   -Create a for loop that puts as many dashes as letters in the word
+   	for(var i = 0; i < word.length; i++){
+		$("#word-one").append("<span>_</span>")
+   }
+
+   * As the user guesses the correct letters, reveal them: `m a d o _  _ a`.
+
+	create a variable for the currentKeyPressed
+	create a loop that looks through the array
+		compare the currentKeyPressed and see if it equals the letter at that index
+			if it equals display it under 'correct letters'
+			if not show on 'Letter guessed'
+
+7. Number of Guesses Remaining: (# of guesses remaining for the user).
+	create a variable for guesses
+	set the variable to 12(optional)
+	if player 
+
+8. Letters Already Guessed: (Letters the user has guessed, displayed like `L Z Y H`).
+	get element by id 
+		append to that element
+		var letterGuessed = function(userKeyPressed){
+		$("#letters-guessed").append("<span>" + userKeyPressed + "</span>"")
+		}
+
+
+var wordArray[] = "madonna"
+
+var handLetterPresses = function(event){
+	var userGuessedLetter = event.key;
+	//function - checks to see if letter is in the word
+	//if letter is in the word, display it on the screen.
+	//else if the letter is NOT in the word
+		//call the decrease guesses funcntion
+		lettersGuessed(userGuessedLetter)
+}
+
+
+9. After the user wins/loses the game should automatically choose another word and make the user play it. -->
+	
