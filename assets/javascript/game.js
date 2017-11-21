@@ -55,12 +55,12 @@
 $(function(){
 
 
-var randomWordArr = ["beer", "function", "cat"]
+var randomWordArr = ["beer", "function", "cat", "again", "done", "splendifirous", "trapping"]
 var randomWord = randomWordArr[Math.floor(Math.random()* randomWordArr.length)]
 
 var s;
 var wins = 0;
-var guesses = 0;
+var guesses = 12;
 var answerArray = [];
 
 
@@ -126,11 +126,10 @@ if (anotherOne === 'Y' ){
 }
 
 function guessRemaining(){
-	console.log("NADDD")
-	guesses++;
-	$("#guess").append(`<span>${guesses}</span>`)
-	if (guesses ===12){
-		console.log("Were done here")
+	$("#guess").append(`<span>${guesses +","}</span>`)
+	guesses--;
+	if (guesses === 0){
+	$("#guess").append(`<span>${" GAME OVER "}</span>`)
 	}
 	
 }
