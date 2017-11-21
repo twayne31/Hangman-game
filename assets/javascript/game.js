@@ -60,6 +60,7 @@ var randomWord = randomWordArr[Math.floor(Math.random()* randomWordArr.length)]
 
 var s;
 var wins = 0;
+var guesses = 0;
 var answerArray = [];
 
 
@@ -94,67 +95,56 @@ document.onkeyup = function(e){
 	}
 	if (!didIFindALetter) {
 		wrongLetter(letter);
+		guessRemaining();
 	}
 
 }
 
 function wrongLetter(letter){
-	console.log("Wrong letter!")
 	if(randomWord != letter){
 	 $("#guessed").append(letter);
 	}
 }
 function incrementWins(){
-	console.log("Wins")
 	alert("You Win")
 	wins++;
 	$("#wins").append(`<span>${wins}</span>`)
-	restartGame();
 }
 
 function checkForWin(){
-	console.log("Check for a win")
 	console.log(randomWord)
 	if(randomWord === answerArray.join('')){
 	incrementWins();
 	}
 }
 
+
 function restartGame(){
 var anotherOne = prompt("Would you like to play another Y/N")
 if (anotherOne === 'Y' ){
-	console.log("Alrighty then")
 }
 }
+
+function guessRemaining(){
+	console.log("NADDD")
+	guesses++;
+	$("#guess").append(`<span>${guesses}</span>`)
+	if (guesses ===12){
+		console.log("Were done here")
+	}
+	
+}
+	// var guesses = 12
+	// guesses--;
+	// if (guesses <= 0){
+	// 	alert("GAME OVER")
+	// }
+	// $("#guess").append(`<span>${guesses}</span>`)
 
 
 
 });
-// function Letter(){
 
-// 	document.onkeyup = function(event){
-// 	//here we get the letter that the user puts in the box
-// 	var letter = event.key
-// 	//make sure we have a guess (checks can be made here, only letters etc.)
-// 		for (var i = 0; i < randomWord.length; i++){
-// 			if (randomWord[i] === letter){
-// 				answerArray[i] = letter;
-// 				$("#answer").html(answerArray[i]);
-// 			}else if (randomWord[i] !== letter){
-				
-// 			}
-// 		}
-// 	counts++;
-// 	console.log(letter)
-// 	document.getElementById("counter").innerHTML = "No of clicks: " + counts
-
-// 	}
-
-// }
-
-
-// function GuessWrong(){
-// }
 
 
 
