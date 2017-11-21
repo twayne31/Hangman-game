@@ -126,11 +126,12 @@ if (anotherOne === 'Y' ){
 }
 
 function guessRemaining(){
-	$("#guess").append(`<span>${guesses +","}</span>`)
+	$("#guess").html(`<span>${guesses}</span>`)
 	guesses--;
 	if (guesses === 0){
-	$("#guess").append(`<span>${" GAME OVER "}</span>`)
+	$("#guess").html(`<span>${" GAME OVER "}</span>`)
 	}
+
 	
 }
 	// var guesses = 12
